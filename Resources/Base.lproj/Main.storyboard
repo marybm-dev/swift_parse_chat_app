@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="68k-BZ-qGy">
+                                <rect key="frame" x="16" y="20" width="568" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCell" id="Tb0-ok-pOt">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tb0-ok-pOt" id="kIG-H3-l6U">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0O-Gu-0mE" userLabel="DockView">
+                                <rect key="frame" x="16" y="540" width="568" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kv-6p-qeZ">
+                                        <rect key="frame" x="20" y="15" width="443" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmz-B6-gsp">
+                                        <rect key="frame" x="478" y="15" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="S62-z1-D7c"/>
+                                        </constraints>
+                                        <state key="normal" title="Send">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6hV-Cb-B1P"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.76164416927878009" green="0.87922737542965923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Kmz-B6-gsp" firstAttribute="leading" secondItem="4kv-6p-qeZ" secondAttribute="trailing" constant="15" id="3oZ-ot-urg"/>
+                                    <constraint firstItem="4kv-6p-qeZ" firstAttribute="top" secondItem="h0O-Gu-0mE" secondAttribute="top" constant="15" id="BTX-5E-e1y"/>
+                                    <constraint firstAttribute="height" constant="60" id="h9y-lV-paC"/>
+                                    <constraint firstItem="Kmz-B6-gsp" firstAttribute="top" secondItem="h0O-Gu-0mE" secondAttribute="top" constant="15" id="nzt-Lz-iS4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kmz-B6-gsp" secondAttribute="trailing" constant="20" id="r0r-yl-Rc9"/>
+                                    <constraint firstItem="4kv-6p-qeZ" firstAttribute="leading" secondItem="h0O-Gu-0mE" secondAttribute="leading" constant="20" id="zaU-kz-8xp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="68k-BZ-qGy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="7jI-pR-Ggl"/>
+                            <constraint firstItem="h0O-Gu-0mE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wqw-ER-ijO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="68k-BZ-qGy" secondAttribute="trailing" id="YJM-6j-GtH"/>
+                            <constraint firstItem="h0O-Gu-0mE" firstAttribute="top" secondItem="68k-BZ-qGy" secondAttribute="bottom" id="kEU-04-b2d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h0O-Gu-0mE" secondAttribute="trailing" id="sC8-q8-YqU"/>
+                            <constraint firstItem="68k-BZ-qGy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sUk-eu-FAf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="h0O-Gu-0mE" secondAttribute="bottom" id="wKA-lm-FCx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dockViewHeightConstraint" destination="h9y-lV-paC" id="RlX-1h-y5U"/>
+                        <outlet property="messageTableView" destination="68k-BZ-qGy" id="zlZ-aH-310"/>
+                        <outlet property="messageTextField" destination="4kv-6p-qeZ" id="I16-dx-1SJ"/>
+                        <outlet property="sendButton" destination="Kmz-B6-gsp" id="1GY-bb-aoT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
